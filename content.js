@@ -4,10 +4,12 @@ function removeStrongTag() {
     const strongTag = document.getElementById('ofc9');
 
     if (strongTag) {
-        console.log('Found <strong> tag with id "ofc9". Removing...');
+        console.log('Removing...');
+        // console.log('Found <strong> tag with id "ofc9". Removing...');
         strongTag.remove();
     } else {
-        console.log('No <strong> tag found with id "ofc9".');
+        console.log('');
+        // console.log('No <strong> tag found with id "ofc9".');
     }
 }
 
@@ -26,4 +28,5 @@ const observer = new MutationObserver((mutationsList) => {
 // Start observing the document with the configured parameters
 observer.observe(document.body, { childList: true, subtree: true });
 
-console.log('Content script has set up the MutationObserver.');
+// console.log('Content script has set up the MutationObserver.');
+console.log('Done !!');

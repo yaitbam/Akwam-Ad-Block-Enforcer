@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Akwam Force Ad Blocker",
+    "name": "Ad Block Enforcer for Akwam",
     "version": "1.0",
-    "description": "Remove <strong> tag with id 'ofc9'",
+    "description": "Ad Block Enforcer for Akwam",
     "permissions": [
         "activeTab",
         "storage",
