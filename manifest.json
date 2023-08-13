@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Akwam Force Ad Blocker",
+    "version": "1.0",
+    "description": "Remove <strong> tag with id 'ofc9'",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.jpg",
+            "48": "images/icon16.jpg",
+            "128": "images/icon16.jpg"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.akwam.us/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
