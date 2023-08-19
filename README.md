@@ -1,6 +1,6 @@
 # Akwam Ad Block Enforcer
 
-Browse `akwam.us` **seamlessly** with your ad blocker. No more disruptions or ad-related pop-ups.
+Browse `akwam website` **seamlessly** with your ad blocker. No more disruptions or ad-related pop-ups.
 
 ## Pre-requisites
 
@@ -11,11 +11,11 @@ Browse `akwam.us` **seamlessly** with your ad blocker. No more disruptions or ad
 1. Clone this repository from GitHub.
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" and load the extension.
-4. Once added, browse `akwam.us` seamlessly.
+4. Once added, browse `akwam website` seamlessly.
 
 ## Usage
 
-Navigate to any page on `akwam.us` with the extension active. Enjoy a smooth browsing experience without disruptions.
+Navigate to any page on `akwam website` with the extension active. Enjoy a smooth browsing experience without disruptions.
 
 ## Feedback & Contributions
 

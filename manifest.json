@@ -2,14 +2,12 @@
     "manifest_version": 3,
     "name": "Ad Block Enforcer for Akwam",
     "version": "1.0",
-    "description": "Ad Block Enforcer for Akwam",
+    "description": "Browse seamlessly with your ad blocker. No more disruptions or ad-related pop-ups.",
     "permissions": [
-        "activeTab",
-        "storage",
-        "scripting"
+      "activeTab"
     ],
     "background": {
-        "service_worker": "background.js"
+      "service_worker": "background.js"
     },
     "action": {
         "default_popup": "popup.html",
@@ -20,13 +18,11 @@
         }
     },
     "content_scripts": [
-        {
-            "matches": [
-                "*://*.akwam.us/*"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
     ]
-}
+  }
+  
