@@ -1,26 +1,40 @@
 console.log('Content script has started.');
 
-function removeStrongTag() {
+function removeElementsAndStyle() {
     const strongTag = document.getElementById('ofc9');
+    const ignielAdBlockDiv = document.getElementById('ignielAdBlock');
+    const bodyTag = document.body;
 
     if (strongTag) {
         console.log('Removing...');
-        // console.log('Found <strong> tag with id "ofc9". Removing...');
         strongTag.remove();
     } else {
-        console.log('');
-        // console.log('No <strong> tag found with id "ofc9".');
+        console.log('Not found !');
+    }
+
+    if (ignielAdBlockDiv) {
+        console.log('Removing...');
+        ignielAdBlockDiv.remove();
+    } else {
+        console.log('Not found');
+    }
+
+    if (bodyTag) {
+        console.log('Updating...');
+        bodyTag.style.setProperty('overflow', 'auto', 'important');
+    } else {
+        console.log('Not found.');
     }
 }
 
 // Initial check
-removeStrongTag();
+removeElementsAndStyle();
 
 // Set up a MutationObserver to watch for changes in the DOM
 const observer = new MutationObserver((mutationsList) => {
     for (let mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            removeStrongTag();
+            removeElementsAndStyle();
         }
     }
 });
@@ -28,5 +42,4 @@ const observer = new MutationObserver((mutationsList) => {
 // Start observing the document with the configured parameters
 observer.observe(document.body, { childList: true, subtree: true });
 
-// console.log('Content script has set up the MutationObserver.');
 console.log('Done !!');
