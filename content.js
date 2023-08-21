@@ -1,4 +1,4 @@
-console.log('Content script has started.');
+// console.log('Content script has started.');
 
 function removeElementsAndStyle() {
     const strongTag = document.getElementById('ofc9');
@@ -6,24 +6,24 @@ function removeElementsAndStyle() {
     const bodyTag = document.body;
 
     if (strongTag) {
-        console.log('Removing...');
+        // console.log('Removing...');
         strongTag.remove();
     } else {
-        console.log('Not found !');
+        // console.log('Not found !');
     }
 
     if (ignielAdBlockDiv) {
-        console.log('Removing...');
+        // console.log('Removing...');
         ignielAdBlockDiv.remove();
     } else {
-        console.log('Not found');
+        // console.log('Not found');
     }
 
     if (bodyTag) {
-        console.log('Updating...');
+        // console.log('Updating...');
         bodyTag.style.setProperty('overflow', 'auto', 'important');
     } else {
-        console.log('Not found.');
+        // console.log('Not found.');
     }
 }
 
@@ -42,4 +42,4 @@ const observer = new MutationObserver((mutationsList) => {
 // Start observing the document with the configured parameters
 observer.observe(document.body, { childList: true, subtree: true });
 
-console.log('Done !!');
+// console.log('Done !!');
